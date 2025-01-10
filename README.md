@@ -2,6 +2,28 @@
 
 little CLI to check for the size of the key of DKIM records.
 
+```
+
+
+     .-.
+    /'v'\           maildigger
+   (/   \)           ~djnn.sh
+==='="="===<
+    |_|              v0.0.1
+
+                                s/o vsim<3
+                        hack the planet,
+                        travel the world . . .
+------------------------------------------------
+       DNS scrapping tool to recover DKIM
+                   records
+
+    ===> evil.djnn.sh/djnn/maildigger  <===
+------------------------------------------------
+
+
+```
+
 > based on [this research](https://dmarcchecker.app/articles/crack-512-bit-dkim-rsa-key)
 
 ## Installing & compiling
