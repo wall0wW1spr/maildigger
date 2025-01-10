@@ -2,22 +2,21 @@ package dkim
 
 type DkimRunner struct {
 
-    /* Nameserver target in order to perform the request */
-    dnsServer string
+	/* Nameserver target in order to perform the request */
+	DnsServer string
 
-    /* list of domains to hit */
-    domains []string
+	/* list of domains to hit */
+	Domains []string
 }
 
+type DkimDomain struct {
 
-type DkimDomains struct {
+	/* related base domain */
+	domain string
 
-    /* related base domain */
-    domain string
+	/* DKIM key */
+	key string
 
-    /* DKIM key */
-    key string
-
-    /* algorithm TODO(djnn): algorithm enum */
-    algorithm string
+	/* DKIM key len */
+	keyLen int32
 }
