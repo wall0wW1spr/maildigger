@@ -40,9 +40,10 @@ var (
 )
 
 var rootCmd = &cobra.Command{
-	Use:   "maildigger",
-	Short: "simple cli to scrape DKIM or SPF records",
-	Long:  ASCII_ART,
+	Use:     "maildigger",
+	Short:   "simple cli to scrape DKIM or SPF records",
+	Long:    ASCII_ART,
+	Version: version,
 	Run: func(cmd *cobra.Command, args []string) {
 		println(ASCII_ART) /* why make hacking CLIs if you cant print silly ascii art ? */
 
@@ -88,7 +89,7 @@ func main() {
 
 	rootCmd.Flags().StringVarP(&nameserver, "nameserver", "n", "8.8.8.8", "DNS nameserver")
 	rootCmd.Flags().StringVarP(&domainsFilepath, "domains", "d", "domains.txt", "file containing list of domains (line by line)")
-	rootCmd.Flags().Int32VarP(&maxLenDKIM, "dkim-max-len", "", 512, "DKIM key max size")
+	rootCmd.Flags().Int32VarP(&maxLenDKIM, "dkim-max-len", "", 128, "DKIM key max size")
 
 	rootCmd.ExecuteC()
 }
